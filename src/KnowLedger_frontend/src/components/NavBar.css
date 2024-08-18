@@ -1,0 +1,32 @@
+.nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #f8f8f8;
+}
+
+.nav-logo {
+  flex: 0;
+}
+
+.nav-items {
+  flex: 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-logo h1,
+.nav-items h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
