@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "KnowLedger_backend": {
+      "candid": "src/KnowLedger_backend/KnowLedger_backend.did",
+      "package": "KnowLedger_backend",
+      "type": "rust"
+    },
+    "KnowLedger_frontend": {
+      "dependencies": [
+        "KnowLedger_backend"
+      ],
+      "source": [
+        "src/KnowLedger_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "KnowLedger_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
