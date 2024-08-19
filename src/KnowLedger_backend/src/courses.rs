@@ -12,7 +12,7 @@ pub struct Course {
     image_link: String,
 }
 
-pub const COURSE_LIST_KEY: u64 = 0; // Key for stable memory
+pub const COURSE_LIST_KEY: u32 = 0; // Key for stable memory
 
 #[init]
 pub fn init() {
@@ -30,7 +30,7 @@ pub fn create_course(
     sub_pages: Vec<(String, String)>, // Vector of tuples (sub-page title, YouTube link)
     image_link: String
 ) {
-    let mut course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY).unwrap_or_default();
+    let mut course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY, &mut []).unwrap();
 
     // Check if the course with the given ID already exists
     if course_list.iter().any(|c| c.id == id) {
@@ -56,7 +56,7 @@ pub fn create_course(
 
 #[query]
 pub fn list_courses() -> Vec<Course> {
-    let course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY).unwrap_or_default();
+    let course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY, &mut []).unwrap;
     course_list
 }
 pub fn main(){
