@@ -15,7 +15,7 @@ export const idlFactory = ({ IDL }) => {
         [],
       ),
     'init' : IDL.Func([], [], []),
-    'list_courses' : IDL.Func([], [CourseList], ['query']),
+    'list_courses' : IDL.Func([], [CourseList], []),
   });
 };
 export const init = ({ IDL }) => { return []; };

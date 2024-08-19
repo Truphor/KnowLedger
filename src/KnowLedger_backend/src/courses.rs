@@ -54,7 +54,7 @@ pub fn create_course(
 }
 
 
-#[query]
+
 pub fn list_courses() -> Vec<Course> {
     let course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY, &mut []).unwrap;
     course_list
