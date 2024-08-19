@@ -16,6 +16,11 @@
     "src/KnowLedger_frontend"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "react-router-dom": "^6.26.1"
+=======
+    "@junobuild/core": "^0.0.58",
+    "@junobuild/core-peer": "^0.0.24"
+>>>>>>> 015a8bd (juno initilization)
   }
 }
