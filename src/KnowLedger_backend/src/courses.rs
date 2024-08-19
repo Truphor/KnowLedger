@@ -59,6 +59,6 @@ pub fn list_courses() -> Vec<Course> {
     let course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY).unwrap_or_default();
     course_list
 }
-fn main(){
-    new_course(1,"Title1","Lorem ipsum",[("Page1","https://youtube.com/link"),("Page2","https://youtube.com/link"),("Page3","https://youtube.com/link")], "image.png");
+pub fn main(){
+    create_course(1,"Title1","Lorem ipsum",[("Page1","https://youtube.com/link"),("Page2","https://youtube.com/link"),("Page3","https://youtube.com/link")], "image.png");
 }
