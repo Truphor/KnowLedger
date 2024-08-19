@@ -1,5 +1,6 @@
 import './SideBar.css';
-import logo from '../../public/logo.jpeg'
+import logo from '../../images/logo.jpeg';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -9,16 +10,16 @@ const Sidebar = () => {
             </div>
             <ul className="sidebar-menu">
                 <li>
-                    <a href="/page1">Explore</a>
+                    <Link to="/page1">Explore</Link>
                 </li>
                 <li>
-                    <a href="/page2">Enrolled</a>
+                    <Link to="/page2">Enrolled</Link>
                 </li>
                 <li>
-                    <a href="/page3">Exam</a>
+                    <Link to="/page3">Exam</Link>
                 </li>
                 <li>
-                    <a href="/page4">Portfolio</a>
+                    <Link to="/page4">Portfolio</Link>
                 </li>
             </ul>
         </div>
