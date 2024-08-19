@@ -4,7 +4,7 @@ use ic_cdk::print;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
-struct Course {
+pub struct Course {
     id: u64,
     title: String,
     description: String,
@@ -12,10 +12,10 @@ struct Course {
     image_link: String,
 }
 
-const COURSE_LIST_KEY: u64 = 0; // Key for stable memory
+pub const COURSE_LIST_KEY: u64 = 0; // Key for stable memory
 
 #[init]
-fn init() {
+pub fn init() {
     // Initialize the canister state
     stable::stable_write(COURSE_LIST_KEY, &vec![]);
     print("Canister initialized.");
@@ -23,7 +23,7 @@ fn init() {
 
 
 #[update]
-fn create_course(
+pub fn create_course(
     id: u64,
     title: String,
     description: String,
@@ -55,10 +55,10 @@ fn create_course(
 
 
 #[query]
-fn list_courses() -> Vec<Course> {
+pub fn list_courses() -> Vec<Course> {
     let course_list: Vec<Course> = stable::stable_read(COURSE_LIST_KEY).unwrap_or_default();
     course_list
 }
-
-new_course(1,"Title1","Lorem ipsum",[("Page1","https://youtube.com/link"),("Page2","https://youtube.com/link"),("Page3","https://youtube.com/link")], "image.png");
-
+fn main(){
+    new_course(1,"Title1","Lorem ipsum",[("Page1","https://youtube.com/link"),("Page2","https://youtube.com/link"),("Page3","https://youtube.com/link")], "image.png");
+}
