@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 import Rightsidebar from "./RightSideBar";
 import Sidebar from "./SideBar";
 import VideoGallery from "./VideoGallery";
