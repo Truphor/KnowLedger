@@ -16,7 +16,11 @@
     "src/KnowLedger_frontend"
   ],
   "dependencies": {
+<<<<<<< Updated upstream
     "@junobuild/core": "^0.0.58",
     "@junobuild/core-peer": "^0.0.24"
+=======
+    "react-router-dom": "^6.26.1"
+>>>>>>> Stashed changes
   }
 }

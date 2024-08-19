@@ -1,35 +1,40 @@
 .nav-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    height: 60px;
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
 .nav-items {
-    display: flex;
-    gap: 40px; 
+  display: flex;
+  gap: 40px;
 }
 
 .nav-items a {
-    text-decoration: none;
-    color: #333; 
-    font-weight: bold;
-    transition: color 0.3s ease; 
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-items a:hover {
+<<<<<<< Updated upstream
     color: #007BFF; 
+=======
+  color: #007bff;
+>>>>>>> Stashed changes
 }
 
-.nav-title h1, .nav-items h1 {
-    margin: 0;
+.nav-title h1,
+.nav-items h1 {
+  margin: 0;
 }

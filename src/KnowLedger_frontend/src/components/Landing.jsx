@@ -6,7 +6,6 @@ import VideoGallery from "./VideoGallery";
 const Landing = () => {
   return (
     <div className="app">
-      <Navbar />
       <div className="main-container">
         <Sidebar />
         <VideoGallery />

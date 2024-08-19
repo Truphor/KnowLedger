@@ -1,22 +1,22 @@
-import './RightSideBar.css';
-import React, { useState } from 'react';
+import "./RightSideBar.css";
+import React, { useState } from "react";
 
 const Rightsidebar = () => {
   const [messages, setMessages] = useState([
-    { text: "You are now connected to the chatbot!", sender: "bot" }
+    { text: "You are now connected to the chatbot!", sender: "bot" },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   const handleSend = async () => {
     if (input.trim()) {
       const newMessages = [...messages, { text: input, sender: "user" }];
       setMessages(newMessages);
-      setInput('');
+      setInput("");
 
-      const response = await fetch('http://localhost:8000/chat', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8000/chat", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ message: input }),
       });
@@ -37,11 +37,11 @@ const Rightsidebar = () => {
         ))}
       </div>
       <div className="chat-input">
-        <input 
-          type="text" 
-          value={input} 
+        <input
+          type="text"
+          value={input}
           onChange={(e) => setInput(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+          onKeyPress={(e) => e.key === "Enter" && handleSend()}
         />
         <button onClick={handleSend}>Send</button>
       </div>
