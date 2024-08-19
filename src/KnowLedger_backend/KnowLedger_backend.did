@@ -1,3 +1,25 @@
-service : {
-    "greet": (text) -> (text) query;
+type SubPage = record {
+    title: text;
+    youtube_link: text;
+};
+
+type Course = record {
+    id: nat64;
+    title: text;
+    description: text;
+    sub_pages: vec SubPage;
+    youtube_link: text;
+};
+
+type CourseList = vec Course;
+
+service : () -> {
+    // Initialize the canister state
+    init: () -> ();
+
+    // Create a new course
+    create_course: (nat64, text, text, vec SubPage, text) -> ();
+
+    // List all courses
+    list_courses: () -> (CourseList) query;
 }
