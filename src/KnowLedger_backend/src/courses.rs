@@ -60,5 +60,6 @@ pub fn list_courses() -> Vec<Course> {
     course_list
 }
 pub fn main(){
-    create_course(1,"Title1","Lorem ipsum",[("Page1","https://youtube.com/link"),("Page2","https://youtube.com/link"),("Page3","https://youtube.com/link")], "image.png");
+    create_course(1,"Title1".to_string(),"Lorem ipsum".to_string(),[("Page1","https://youtube.com/link")
+    ,("Page2","https://youtube.com/link"),("Page3","https://youtube.com/link")], "image.png".to_string());
 }
